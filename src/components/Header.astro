@@ -1,0 +1,38 @@
+---
+import ButtonWhatapp from "./ButtonWhatapp.astro";
+
+---
+
+<header class="fixed top-0 inset-x-0 ">
+    <nav class="container mx-auto px-4 py-4 bg-violet-700 rounded-b-lg ">
+        <div class="flex justify-between items-center">
+            <div class="text-white font-bold text-2xl">
+                BEworks
+            </div>
+            <div class="hidden md:flex items-center">
+                <a href="#" class="text-white mx-5">Inicio</a>
+                <a href="#" class="text-white mx-5">Quiénes somos</a>
+                <a href="#" class="text-white mx-5">Servicios</a>
+                <a href="#" class="text-white mx-5">Contacto</a>
+                <ButtonWhatapp />
+            </div>
+            <button id="menuBtn" class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="24" height="24">
+                    <path fill-rule="evenodd" d="M18 7H2v2h16V7zm0 4H2v2h16v-2zm-16 4h16v-2H2v2z" clip-rule="evenodd"/>
+                </svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="md:hidden mt-4 hidden">
+            <a href="#" class="block text-white my-1">Inicio</a>
+            <a href="#" class="block text-white my-1">Quiénes somos</a>
+            <a href="#" class="block text-white my-1">Servicios</a>
+            <a href="#" class="block text-white my-1">Contacto</a>
+        </div>
+    </nav>
+</header>
+
+<script>
+    document.getElementById('menuBtn').addEventListener('click', function() {
+        document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+</script>

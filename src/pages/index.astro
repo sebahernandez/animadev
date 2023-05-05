@@ -1,0 +1,94 @@
+---
+import Card from '../components/Card.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import ImageBlocks from '../components/ImageBlocks.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Anima - Desarrollo y diseño web profesional integral">
+	<Header />
+  	<Hero />
+	<ImageBlocks />
+	<section class="container mx-auto py-40">
+		<div class="flex flex-col sm:flex-row">
+			<Card 
+			icon="fa-solid fa-shield-halved"
+			title="Certificado SSL (https://) " 
+			body="Nos aseguramos de que su sitio web esté completamente seguro al implementar un certificado SSL que garantiza la seguridad de su sitio y la privacidad de sus visitantes"
+			/>
+
+			<Card 
+			icon="fa-solid fa-magnifying-glass"
+			title="Contenido SEO  " 
+			body="Trabajamos con expertos en SEO para crear contenido optimizado que le permita a su sitio web obtener una mayor visibilidad en los motores de búsqueda."
+			/>
+			<Card 
+			icon="fa-sharp fa-solid fa-hammer"
+			title="Gestión intuitiva" 
+			body="Nos aseguramos de que su sitio web sea fácil de usar y administrar, de modo que pueda realizar cambios y actualizaciones de manera sencilla y sin necesidad de conocimientos técnicos."
+			/>
+		</div>
+
+		<div class="flex flex-col sm:flex-row">
+			<Card 
+			icon="fa-sharp fa-solid fa-share-nodes"
+			title="Conexión a redes sociales" 
+			body="Nos aseguramos de que su sitio web esté conectado a sus redes sociales para que pueda aumentar su presencia en línea y llegar a un público más amplio."
+			/>
+
+			<Card 
+			icon="fa-brands fa-wordpress"
+			title="Plugins especiales" 
+			body="Utilizamos los mejores plugins del mercado para garantizar que su sitio web tenga todas las funcionalidades que necesita para ser eficiente y efectivo."
+			/>
+			<Card 
+			icon="fa-sharp fa-solid fa-phone-volume"
+			title="Soporte 24/7" 
+			body="Ofrecemos soporte técnico las 24 horas del día, los 7 días de la semana, para que pueda estar seguro de que siempre habrá alguien disponible para ayudarlo en caso de cualquier problema o emergencia."
+			/>
+		</div>
+	</section>
+
+	<section class=" mx-auto py-20 bg-gray-100">
+		<div class="flex justify-center items-center flex-col text-center">
+			<h2 class="text-5xl py-5 font-bold text-violet-700">Diseño de interfaces y experiencia de usuario</h2>
+			<p class=" text-gray-500 py-2 text-2xl" >"Diseño de interfaces y experiencia de usuario para destacar tu marca en línea. <br> Servicios personalizados y efectivos para maximizar la satisfacción del usuario."</p>
+		</div>
+	</section>
+
+    <section class="py-40">
+		<h2 class="text-center text-5xl py-10 font-bold">Testimonios</h2>
+		<div class="container mx-auto flex flex-wrap justify-center ">
+			<Testimonials
+				name="Carlos Carlitos"
+				content="Sometimes when I'm talking with others, my words can't keep up with my thoughts. I wonder why we think faster than we speak. Hobbes: Probably so we can think twice"
+				img="/images/persona1.jpg"
+				website="Sitio web 1"
+
+			/>
+			<Testimonials
+				name="Carlos Carlitos"
+				content="Sometimes when I'm talking with others, my words can't keep up with my thoughts. I wonder why we think faster than we speak. Hobbes: Probably so we can think twice"
+				img="/images/persona2.jpg"
+				website="Sitio web 2"
+
+			/>
+
+			<Testimonials
+				name="Carlos Carlitos"
+				content="Sometimes when I'm talking with others, my words can't keep up with my thoughts. I wonder why we think faster than we speak. Hobbes: Probably so we can think twice"
+				img="/images/persona2.jpg"
+				website="Sitio web 2"
+			/>
+
+		</div>
+	  </section>		
+
+     <ContactForm />
+
+	 <Footer />
+</Layout>
